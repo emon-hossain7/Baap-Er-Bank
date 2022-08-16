@@ -2581,10 +2581,6 @@ html {
   margin-right: auto;
 }
 
-.mt-9 {
-  margin-top: 2.25rem;
-}
-
 .mb-5 {
   margin-bottom: 1.25rem;
 }
@@ -2599,6 +2595,10 @@ html {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
 }
 
 .mt-8 {
@@ -2637,24 +2637,20 @@ html {
   width: 18rem;
 }
 
-.w-96 {
-  width: 24rem;
+.w-\[450px\] {
+  width: 450px;
 }
 
 .w-\[200px\] {
   width: 200px;
 }
 
-.w-\[420px\] {
-  width: 420px;
-}
-
-.w-\[450px\] {
-  width: 450px;
-}
-
 .max-w-\[960px\] {
   max-width: 960px;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {
@@ -2663,6 +2659,10 @@ html {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -2675,6 +2675,11 @@ html {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.bg-yellow-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
 
 .bg-green-200 {
@@ -2697,21 +2702,6 @@ html {
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
 }
 
-.bg-violet-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(109 40 217 / var(--tw-bg-opacity));
-}
-
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-}
-
-.bg-violet-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(167 139 250 / var(--tw-bg-opacity));
-}
-
 .bg-teal-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(45 212 191 / var(--tw-bg-opacity));
@@ -2722,27 +2712,8 @@ html {
   background-color: rgb(52 211 153 / var(--tw-bg-opacity));
 }
 
-.bg-yellow-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
-}
-
-.bg-red-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
-}
-
-.bg-green-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
-}
-
 .p-8 {
   padding: 2rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
 }
 
 .pt-9 {
@@ -2751,6 +2722,10 @@ html {
 
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {

@@ -28,7 +28,7 @@ depositBtn?.addEventListener('click', function () {
     //step 2: get the deposit amount from the deposit input field
     const depositField = document.getElementById('deposit-field');
     const newDepositAmount = parseFloat(depositField.value);
-    //step 7 : clear the deposit field
+    // clear the deposit field
     depositField.value = '';
     //step 3: get the current deposit total
     const depositTotalElement = document.getElementById('deposit-total');
@@ -54,7 +54,7 @@ depositBtn?.addEventListener('click', function () {
 // withdraw calculation
 // step 1: add event listener to the withdraw button
 const withdrawBtn = document.getElementById('btn-withdraw');
-withdrawBtn.addEventListener('click', function () {
+withdrawBtn?.addEventListener('click', function () {
     //step 2: get the withdraw amount from the withdraw input field
     const withdrawField = document.getElementById('withdraw-field');
     const newWithdrawAmount = parseFloat(withdrawField.value);
