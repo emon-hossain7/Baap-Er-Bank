@@ -28,7 +28,8 @@ depositBtn?.addEventListener('click', function () {
     //step 2: get the deposit amount from the deposit input field
     const depositField = document.getElementById('deposit-field');
     const newDepositAmount = parseFloat(depositField.value);
-
+    //step 7 : clear the deposit field
+    depositField.value = '';
     //step 3: get the current deposit total
     const depositTotalElement = document.getElementById('deposit-total');
     const previousDepositTotal = parseFloat(depositTotalElement.innerText);
@@ -46,8 +47,7 @@ depositBtn?.addEventListener('click', function () {
     const currentBalanceTotal = previousBalanceTotal + newDepositAmount;
     //set the balance total
     balanceTotalElement.innerText = currentBalanceTotal
-    //step 7 : clear the deposit field
-    depositField.value = '';
+
 })
 
 //bank.html file
@@ -58,26 +58,36 @@ withdrawBtn.addEventListener('click', function () {
     //step 2: get the withdraw amount from the withdraw input field
     const withdrawField = document.getElementById('withdraw-field');
     const newWithdrawAmount = parseFloat(withdrawField.value);
-
+    //step 7 : clear the WithDraw field
+    withdrawField.value = '';
+    if (isNaN(newWithdrawAmount)) {
+        alert('Please provide a valid number')
+        return;
+    }
     //step 3: get the current WithDraw total
     const withdrawTotalElement = document.getElementById('WithDraw-total');
     const previousWithdrawTotal = parseFloat(withdrawTotalElement.innerText);
-    
-    // step 4: add number to set the total WithDraw
-    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
-    withdrawTotalElement.innerText = currentWithdrawTotal
 
     //step 5: get previous ballance current total
     const balanceTotalElement = document.getElementById('amount-total');
     const previousBalanceTotal = parseFloat(balanceTotalElement.innerText);
-    
+
+    if (newWithdrawAmount > previousBalanceTotal) {
+        alert('Not enough money')
+        return;
+    }
+
+    // step 4: add number to set the total WithDraw
+    const currentWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+    withdrawTotalElement.innerText = currentWithdrawTotal
+
     //step  6: calculate current total balance
-    const  newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
+    const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
     //set the balance total
     balanceTotalElement.innerText = newBalanceTotal
-    
-    //step 7 : clear the WithDraw field
-    withdrawField.value = '';
+
+
+
 })
 
 
